@@ -1,19 +1,19 @@
 import os
 import csv
 
-path = r"our_super_cool_ascii-bar-plot\data\points.csv"
+#path = r"our_super_cool_ascii-bar-plot\data\points.csv"
 
 
 
-def load_rows(csv_path):
-    row_list = []
-    with open(csv_path) as f:
-        for row in csv.reader(f):
-            row_list.append(row)
-    row_list.pop(0)
-    return row_list
+# def load_rows(csv_path):
+#     row_list = []
+#     with open(csv_path) as f:
+#         for row in csv.reader(f):
+#             row_list.append(row)
+#     row_list.pop(0)
+#     return row_list
 
-test = load_rows(path)
+#test = load_rows(path)
 
 
 def average_value1_by_type(rows):
@@ -38,9 +38,12 @@ def average_value1_by_type(rows):
         if row[0] == "B":
             d+= (float(row[1])) #+ float(row[2]))
             d_count += 1
-    print(f"A {a/a_count}\n")
-    print(f"B {b/b_count}\n")
-    print(f"C {c/c_count}\n")
-    print(f"D {d/d_count}\n")
+    # print(f"A {a/a_count}\n")
+    # print(f"B {b/b_count}\n")
+    # print(f"C {c/c_count}\n")
+    # print(f"D {d/d_count}\n")
+    result = [("A", a/a_count), ("B", b/b_count), ("C", c/c_count), ("D", d/d_count)]
+    return result
+    
 
-average_value1_by_type(test)
+#average_value1_by_type(test)
