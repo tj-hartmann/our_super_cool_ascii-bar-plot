@@ -35,7 +35,7 @@ def average_value1_by_type(rows):
         if row[0] == "C":
             c+= (float(row[1])) #+ float(row[2]))
             c_count += 1
-        if row[0] == "B":
+        if row[0] == "D":
             d+= (float(row[1])) #+ float(row[2]))
             d_count += 1
     # print(f"A {a/a_count}\n")
